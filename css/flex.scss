@@ -1,0 +1,66 @@
+/*
+  display: flex | inline-flex
+  flex-direction: row | column
+  flex-wrap: wrap | nowrap | wrapreverse
+  flex-basis: <value>
+  justify-content: flex-start | flex-end | center
+  align-self: flex-start | flex-end | center
+  align-items: flex-start | flex-end | center
+  align-content: flex-start | flex-end | center
+  flex-grow: <value>
+  flex-shrink: <value>
+  order: <value>
+ */
+
+$border: 1px solid #ccc;
+$padding: 10px;
+
+@media(min-width: 768px) {
+  .container-1 {
+    display: flex;
+    align-items: stretch; //center, flex-start, flex-end
+    flex-direction: row; //column
+  }
+
+  .container-2 {
+    display: flex;
+    justify-content: space-between; //flex-end, center, flex-start, space-between, space-around, space-evenly
+  }
+
+  .container-3 {
+    display: flex;
+    flex-wrap: nowrap; //wrap, nowrap, wrapreverse
+    justify-content: space-between;
+  }
+}
+
+.container-1 div, .container-2 div, .container-3 div {
+  border: $border;
+  padding: $padding;
+}
+
+.box1 {
+  flex: 1;
+  order: 2;
+}
+
+.box2 {
+  flex: 1;
+}
+
+.box3 {
+  flex: 2;
+}
+
+.container-2 .box {
+  flex-basis: 31%;
+}
+
+.container-3 .box {
+  flex-basis: 15%;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
